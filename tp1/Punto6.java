@@ -11,10 +11,13 @@ public class Punto6 {
         System.out.println("Ingrese tres números enteros.");
         System.out.println("Número 1: ");
         int NUM1 = scanner.nextInt();
+        scanner.nextLine();
         System.out.println("Número 2: ");
         int NUM2 = scanner.nextInt();
+        scanner.nextLine();
         System.out.println("Número 3: ");
         int NUM3 = scanner.nextInt();
+        scanner.nextLine();
 
         int producto = NUM1 * NUM2 * NUM3;
         int suma = NUM1 + NUM2 + NUM3;

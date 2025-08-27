@@ -1,5 +1,4 @@
 package tp1;
-
 import java.util.Scanner;
 
 /* Repita la operación anterior, pero esta vez, para los tres valores utilizar
@@ -17,6 +16,7 @@ public class Punto6p2 {
         while (cont <= 3){
             System.out.println("Número " + cont + ":");
             int num = scanner.nextInt();
+            scanner.nextLine();
             suma = suma + num;
             producto = producto * num;
             cont = cont + 1;

@@ -12,6 +12,7 @@ public class Punto5 {
 
         System.out.println("Ingrese un día de la semana (L, M, I, J, V, S, D)");
         char dia = scanner.next().charAt(0);
+        scanner.nextLine();
 
         if (dia == 'M' || dia == 'I' || dia == 'J') {
             System.out.println("HOY TENGO RESOLUCION");
