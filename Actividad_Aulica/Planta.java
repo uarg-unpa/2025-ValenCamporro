@@ -48,8 +48,16 @@ public class Planta {
         }
     }
 
-    public void crecer(double crecimiento){
-        altura = altura + crecimiento;
+    public void crecer() {
+        this.altura += 1.0;
+    }
+
+    public void regar() {
+        this.nivelAgua += 10;
+        if (this.nivelAgua > 100) {
+            this.nivelAgua = 100;
+        }
+        this.crecer();
     }
 
     public String toString() {
