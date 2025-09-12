@@ -10,6 +10,8 @@ public class Alumno {
     private int legajo;
     private int edad;
     private String carrera;
+    private String cursoInscripto;
+    private String materiaExamen;
 
     //Constructor
     public Alumno(String nombre, String apellido, int legajo, int edad, String carrera) {
@@ -58,14 +60,15 @@ public class Alumno {
 
     //Métodos
     public void inscribirseCurso(String curso) {
-        System.out.println("Se inscribió en: " + curso);
+        this.cursoInscripto = curso;
     }
 
     public void rendirExamen(String materia) {
-        System.out.println("Rindió examen de: " + materia);
+        this.materiaExamen = materia;
     }
 
     public String toString() {
-        return nombre + apellido + " - legajo: " + legajo;
+        return nombre + " " + apellido + " - legajo: " + legajo + " - edad: " + edad + " - carrera: " + carrera +
+        " - curso inscripto: " + cursoInscripto + " - materia para rendir examen: " + materiaExamen;
     }
 }
