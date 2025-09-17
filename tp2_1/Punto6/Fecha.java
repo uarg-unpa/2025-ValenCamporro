@@ -47,5 +47,73 @@ public class Fecha {
         }
     }
 
-    
+    public boolean esFechaValida(int d, int m, int a) {
+        if (a <= 0) {
+            return false;
+        } else {
+            if (m < 1 || m > 12) {
+                return false;
+            } else {
+                if (d < 1) {
+                    return false;
+                }
+            }
+
+        }
+
+        int diasMes;
+        switch (m) {
+        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+            diasMes = 31;
+            break;
+        case 4: case 6: case 9: case 11:
+            diasMes = 30;
+            break;
+        case 2:
+            diasMes = 28;
+            break;
+        default:
+            return false;
+        }   
+
+        return d <= diasMes;
+
+    }
+
+    /* Obtener el nombre del mes de la fecha (ejemplo: si el mes es 1, obtener Enero). */
+    public String nombreMes() {
+        switch (this.mes) {
+        case 1:
+            return "Enero";
+        case 2:
+            return "Febrero";
+        case 3: 
+            return "Marzo";
+        case 4: 
+            return "Abril";
+        case 5: 
+            return "Mayo";
+        case 6: 
+            return "Junio";
+        case 7: 
+            return "Julio";
+        case 8: 
+            return "Agosto";
+        case 9: 
+            return "Septiembre";
+        case 10:
+            return "Octubre";
+        case 11:
+            return "Noviembre";
+        case 12:    
+            return "Diciembre";
+        default:
+            return "Mes inválido";
+        }
+    }
+
+    /* Mostrar la fecha de la siguiente forma: 1 de Setiembre de 2012. */
+    public String toString() {
+        return this.dia + " de " + nombreMes() + " de " + this.anio;
+    }
 }
