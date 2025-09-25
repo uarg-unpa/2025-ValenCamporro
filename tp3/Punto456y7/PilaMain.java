@@ -1,22 +1,25 @@
-package Punto4y5;
+package Punto456y7;
 
-/* 6. Usar los métodos sacar(), meter(), estaVacia() para hacer las siguientes operaciones: */
 // Complicadísimo
 
 public class PilaMain {
     public static void main(String[] args) {
         
+        // 4) meter y sacar
         Pila pila = new Pila(5);
-
         pila.meter('A');
         pila.meter('B');
         pila.meter('C');
         pila.meter('D');
         pila.meter('E');
+        pila.sacar();
 
+        // 5) elementoCima
         System.out.println("El elemento que está en la cima es: " + pila.elementoCima());
+        System.out.println();
 
-        /* a) Asignar a X el segundo elemento desde la parte superior de la pila, dejando la pila sin sus dos elementos
+        /* 6. Usar los métodos sacar(), meter(), estaVacia() para hacer las siguientes operaciones:
+        a) Asignar a X el segundo elemento desde la parte superior de la pila, dejando la pila sin sus dos elementos
         de la parte superior. */
         char x;
         pila.sacar();
@@ -94,5 +97,17 @@ public class PilaMain {
             pila.meter(aux.sacar());
         }
         System.out.println("f) x = " + x);
+
+        // 7) Copia de la pila
+        Pila copia = pila.copiar();
+        System.out.println();
+        System.out.println("Pila original cima: " + pila.elementoCima());
+        System.out.println("Copia cima: " + copia.elementoCima());
+
+        pila.sacar();
+        System.out.println("Después de sacar de la original:");
+        System.out.println("Original cima: " + pila.elementoCima());
+        System.out.println("Copia cima: " + copia.elementoCima());
     }
 }
+//que sopa

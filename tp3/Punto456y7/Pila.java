@@ -1,11 +1,8 @@
-package Punto4y5;
+package Punto456y7;
 
 /* 4) Utilizando la clase Pila implementada con arreglo únicamente (no utiliza índice cima), escribir un
 programa que permita meter y sacar elementos de la pila. Cada vez que se realice una operación deberá
 informar cuantos elementos hay en la pila y cuantos elementos le faltan para llegar al máximo. */
-
-/* 5) Agregar a la clase Pila el método elementoCima() que retorne el elemento cima sin cambiar la pila. Nota:
-no olvidar que si bien la pila se implementa como un arreglo, no debería manejarse como tal. */
 
 public class Pila {
     
@@ -61,6 +58,8 @@ public class Pila {
         }
     }
 
+    /* 5) Agregar a la clase Pila el método elementoCima() que retorne el elemento cima sin cambiar la pila. Nota:
+    no olvidar que si bien la pila se implementa como un arreglo, no debería manejarse como tal. */
     public char elementoCima() {
         if (!estaVacia()) {
             return elementos[cantidad - 1];
@@ -68,6 +67,25 @@ public class Pila {
             System.out.println("La pila está vacía.");
             return '\0';
         }
+    }
+
+    /* 7) Agregar a la clase Pila un método que retorne una copia exacta de una pila. Nota: no olvidar que si bien la
+    pila se implementa como un arreglo, no debería manejarse como tal. */
+    public Pila copiar() {
+        Pila aux = new Pila(elementos.length);
+        Pila copia = new Pila(elementos.length);
+
+        while (!estaVacia()) {
+            aux.meter(sacar());
+        }
+
+        while (!aux.estaVacia()) {
+            char temp = aux.sacar();
+            meter(temp);
+            copia.meter(temp);
+        }
+
+        return copia;
     }
 
     public void informarEstado(String mensaje) {
