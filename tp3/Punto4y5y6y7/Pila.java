@@ -1,4 +1,4 @@
-package Punto456y7;
+package Punto4y5y6y7;
 
 /* 4) Utilizando la clase Pila implementada con arreglo únicamente (no utiliza índice cima), escribir un
 programa que permita meter y sacar elementos de la pila. Cada vez que se realice una operación deberá
