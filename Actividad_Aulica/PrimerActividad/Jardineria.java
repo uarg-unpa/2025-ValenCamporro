@@ -1,4 +1,4 @@
-package Actividad_Aulica;
+package Actividad_Aulica.PrimerActividad;
 import java.util.Scanner;
 
 public class Jardineria {
