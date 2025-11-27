@@ -4,7 +4,7 @@ package tp6.Punto10;
 Pista: Divide el problema en dos partes: el elemento actual y el mínimo de los elementos restantes
 del arreglo. */
 
-public class valorMin {
+public class ValorMin {
     public static void main(String[] args) {
 
         int[] v = {5, 2, 9, 1, 7};

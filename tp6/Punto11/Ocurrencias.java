@@ -5,7 +5,7 @@ enteros.
 Pista: Compara el elemento actual con el número buscado y llama recursivamente con el resto del
 arreglo */
 
-public class ocurrencias {
+public class Ocurrencias {
     public static void main(String[] args) {
         
         int[] v = {2, 5, 2, 7, 2, 1};

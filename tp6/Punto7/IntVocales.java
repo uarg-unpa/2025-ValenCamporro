@@ -3,7 +3,7 @@ package tp6.Punto7;
 /* 7. Escribir un método recursivo int vocales(String cd) para calcular el número de vocales de una
 cadena. */
 
-public class intVocales {
+public class IntVocales {
     public static void main(String[] args) {
 
         String s = "recursion";
